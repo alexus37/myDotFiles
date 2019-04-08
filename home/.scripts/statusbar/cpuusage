@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "$(mpstat 1 1 | tail -1 | awk '{print $3}')%"
