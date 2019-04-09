@@ -10,13 +10,6 @@ label=PING
 [myipaddress]
 interval=60
 
-
-# TODO: add clipboard indicator
-#[clipboard]
-#label=<span color='gray'></span>
-#command=echo "$(xclip -o -selection "clipboard" | grep -o '^.\{0,9\}' | sed -e 's/[^a-zA-Z0-9\-]/_/g')"
-#interval=5
-
 [cpuusage]
 interval=10
 label=CPU 
@@ -33,7 +26,7 @@ interval=15
 label=💻
 
 [volume]
-interval=once
+interval=60
 signal=10
 
 # TODO: make this work
