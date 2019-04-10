@@ -160,7 +160,7 @@ bindsym XF86AudioPrev 		exec playerctl previous
 exec --no-startup-id nm-applet
 
 # set up compose key
-exec-always --no-startup-id setxkbmap -option compose:caps
+exec_always --no-startup-id setxkbmap -option compose:caps
 
 # styles
 exec --no-startup-id compton
@@ -168,7 +168,7 @@ new_window 1pixel
 
 # language switcher
 exec_always --no-startup-id setxkbmap -layout us,de
-exec_always --no-startup-id setxkbmap -option 'grp:ctrl_alt_toggle'
+exec_always --no-startup-id setxkbmap -option "grp:ctrl_alt_toggle"
 
 
 # mouse follow disabled
