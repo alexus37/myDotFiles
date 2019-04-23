@@ -168,7 +168,7 @@ new_window 1pixel
 
 # language switcher
 exec_always --no-startup-id setxkbmap -layout us,de
-exec_always --no-startup-id setxkbmap -option "grp:ctrl_alt_toggle"
+exec_always --no-startup-id setxkbmap -option 'grp:ctrl_alt_toggle'
 
 
 # mouse follow disabled
