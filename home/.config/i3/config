@@ -17,7 +17,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'Ubuntu-16'
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -101,7 +101,7 @@ bar {
 # set background
 exec --no-startup-id feh --bg-scale --no-xinerama ~/Pictures/wallpaper.jpg
 
-# alt tab config 
+# alt tab config
 exec_always alttab -d 1
 
 # run clip damon
@@ -129,7 +129,7 @@ bindsym $mod+g 			exec google-chrome-stable --remote-debugging-port=9222
 bindsym $mod+e                  exec export EDITOR='nvim' && gnome-terminal -e ranger
 
 # screenshot
-bindsym $mod+p 			exec  gnome-screenshot -a
+bindsym $mod+p 			exec  shutter -s -e
 
 
 # clip history
@@ -167,8 +167,8 @@ exec --no-startup-id compton
 new_window 1pixel
 
 # language switcher
-exec_always --no-startup-id setxkbmap -layout us,de
-exec_always --no-startup-id setxkbmap -option 'grp:ctrl_alt_toggle'
+exec_always --no-startup-id "sleep 1; setxkbmap -layout us,de"
+exec_always --no-startup-id "sleep 1; setxkbmap -option 'grp:ctrl_alt_toggle'"
 
 
 # mouse follow disabled
