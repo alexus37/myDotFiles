@@ -25,9 +25,9 @@ label=MEM
 interval=15
 label=💻
 
-[volume]
-interval=60
-signal=10
+[volume-pulseaudio]
+interval=once
+signal=1
 
 # TODO: make this work
 [internet]
