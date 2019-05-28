@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) 
+		setxkbmap -layout us,de 
+		setxkbmap -option 'grp:ctrl_alt_toggle'
+		break
+		;;
+esac
+
+
+~/.scripts/statusbar/xkblayout-state print "%s"

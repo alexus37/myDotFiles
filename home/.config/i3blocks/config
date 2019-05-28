@@ -33,6 +33,10 @@ signal=1
 [internet]
 interval=10
 
+[lang]
+label=🚩
+interval=5
+
 [battery]
 command=battery BAT0
 interval=5
