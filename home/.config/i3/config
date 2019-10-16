@@ -49,7 +49,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
-bindsym $mod+Shift+e layout toggle split
+# bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -126,7 +126,10 @@ bindsym $mod+l                  exec --no-startup-id i3lock-fancy
 bindsym $mod+g 			exec google-chrome-stable --remote-debugging-port=9222
 
 # show ranger
-bindsym $mod+e                  exec export EDITOR='nvim' && gnome-terminal -e ranger
+bindsym $mod+Shift+e            exec export EDITOR='nvim' && gnome-terminal -e ranger
+
+# show nautilus
+bindsym $mod+e			exec nautilus --no-desktop &
 
 # screenshot
 bindsym $mod+p 			exec  shutter -s -e
@@ -167,7 +170,9 @@ exec_always --no-startup-id setxkbmap -option compose:caps
 
 # styles
 exec --no-startup-id compton
-new_window 1pixel
+new_window pixel 3
+
+
 
 # language switcher
 exec_always --no-startup-id "sleep 1; setxkbmap -layout us,de"
