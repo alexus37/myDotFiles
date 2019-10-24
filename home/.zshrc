@@ -97,7 +97,7 @@ fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-
+eval $(thefuck --alias)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
