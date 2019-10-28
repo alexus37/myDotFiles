@@ -5,14 +5,11 @@ markup=pango
 [pingtime]
 interval=10
 label=PING
+min_width=⣾⣄ 1000 ms
 
 # show ip address
 [myipaddress]
 interval=60
-
-[cpuusage]
-interval=10
-label=CPU 
 
 [bandwidth]
 interval=5
@@ -22,8 +19,8 @@ interval=30
 label=MEM
 
 [cpu]
-interval=15
-label=💻
+interval=1
+min_width=⣾⣄ 100.00%
 
 [volume-pulseaudio]
 interval=once

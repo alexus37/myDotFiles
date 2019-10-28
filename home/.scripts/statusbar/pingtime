@@ -1,11 +1,58 @@
-
 #!/bin/bash
 
-online=$(ping -c 4 www.google.com | tail -1| awk '{print $4}' | cut -d '/' -f 2)
+SAVE2=/tmp/i3blocks_ping_usage
 
-if [ -z "$online" ]
+declare -A graph=(
+  ["11"]="\u28C0" # ⣀
+  ["12"]="\u28E0" # ⣠
+  ["13"]="\u28F0" # ⣰
+  ["14"]="\u28F8" # ⣸
+  ["21"]="\u28C4" # ⣄
+  ["22"]="\u28E4" # ⣤
+  ["23"]="\u28F4" # ⣴
+  ["24"]="\u28FC" # ⣼
+  ["31"]="\u28C6" # ⣆
+  ["32"]="\u28E6" # ⣦
+  ["33"]="\u28F6" # ⣶
+  ["34"]="\u28FE" # ⣾
+  ["41"]="\u28C7" # ⣇
+  ["42"]="\u28E7" # ⣧
+  ["43"]="\u28F7" # ⣷
+  ["44"]="\u28FF" # ⣿
+)
+
+if [[ ! -f $SAVE2 ]]
 then
-      echo "offline"
-else
-      echo "$online"
+  echo 1 1 1 1 > $SAVE2
 fi
+
+
+pingTime=$(ping -c 4 www.google.com | tail -1| awk '{print $4}' | cut -d '/' -f 2 | cut -d "." -f 1 | cut -d "," -f 1)
+
+if [ -z "$pingTime" ]
+then
+  echo "offline"
+else
+  val=(`cat $SAVE2`)
+
+  if [[ $pingTime -ge 100 ]]
+  then
+    val=(${val[@]:1:3} 4)
+  elif [[ $pingTime -ge 50 ]]
+  then
+    val=(${val[@]:1:3} 3)
+  elif [[ $pingTime -ge 25 ]]
+  then
+    val=(${val[@]:1:3} 2)
+  else
+    val=(${val[@]:1:3} 1)
+  fi
+
+  echo -ne ${graph[${val[0]}${val[1]}]}${graph[${val[2]}${val[3]}]}
+  printf " %dms\n" $pingTime
+
+  echo ${val[@]} > $SAVE2
+fi
+
+
+
