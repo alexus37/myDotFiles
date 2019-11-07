@@ -2,6 +2,14 @@ command=~/.scripts/statusbar/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
+[monitors]
+#label=🖥️
+interval=once
+#SHOW_ON_OFF=1
+#SHOW_NAMES=1
+#SHOW_PRIMARY=1
+#SHOW_MODE=1
+
 [pingtime]
 interval=10
 label=PING
