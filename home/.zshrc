@@ -8,7 +8,7 @@ export ZSH="/home/ax/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize npm pip python debian zsh-z  zsh-syntax-highlighting)
+plugins=(git colorize npm pip python debian zsh-z  zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,6 +97,10 @@ fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
+
 eval $(thefuck --alias)
 # User configuration
 
@@ -138,4 +142,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
