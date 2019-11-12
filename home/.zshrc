@@ -9,6 +9,7 @@ export ZSH="/home/ax/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="agnoster"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -96,7 +97,7 @@ else
 fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+###source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
