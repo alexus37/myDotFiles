@@ -53,4 +53,3 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
