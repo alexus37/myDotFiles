@@ -57,3 +57,4 @@ export PATH=/home/ax/Projects/basteln/Tools/autotest:$PATH
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+[[ ! -f $HOME/miniconda3/bin/activate.sh ]] || source $HOME/miniconda3/bin/activate.sh
