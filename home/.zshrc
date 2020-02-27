@@ -51,8 +51,11 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=/usr/local/cuda-10.1/bin:$PATH 
+export PATH=/usr/local/cuda-10.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.1/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 export PATH=/home/ax/Projects/basteln/Tools/autotest:$PATH
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[[ ! -f $HOME/miniconda3/bin/activate.sh ]] || source $HOME/miniconda3/bin/activate.sh
+[[ ! -f $HOME/Programs/mitsuba/setpath.sh ]] || source $HOME/Programs/mitsuba/setpath.sh
