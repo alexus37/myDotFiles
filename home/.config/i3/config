@@ -188,5 +188,5 @@ exec_always --no-startup-id "sleep 1; setxkbmap -option 'grp:ctrl_alt_toggle'"
 focus_follows_mouse no
 
 #config triple monitor
-bindsym $mod+Alt+3  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
+bindsym $mod+m  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
 
