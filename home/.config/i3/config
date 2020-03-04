@@ -113,9 +113,6 @@ exec_always --no-startup-id /home/ax/.scripts/tools/gnome-keyring.sh
 # dual screen script
 exec_always --no-startup-id /home/ax/.screenlayout/doubleMonitor.sh
 
-# triple monitor screen script (WORK)
-exec_always --no-startip-id /home/ax/.screenlayout/tripleMonitor.sh
-
 # kill focused window
 bindsym $mod+q                  kill
 
