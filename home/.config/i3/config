@@ -125,6 +125,9 @@ bindsym $mod+l                  exec --no-startup-id i3lock-fancy
 # start google chrome
 bindsym $mod+g 			exec google-chrome-stable --remote-debugging-port=9222
 
+# start rambox
+bindsym $mod+r			exec rambox &
+
 # show ranger
 bindsym $mod+Shift+e            exec export EDITOR='nvim' && gnome-terminal -e ranger
 
