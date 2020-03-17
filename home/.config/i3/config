@@ -113,9 +113,6 @@ exec_always --no-startup-id /home/ax/.scripts/tools/gnome-keyring.sh
 # dual screen script
 exec_always --no-startup-id /home/ax/.screenlayout/doubleMonitor.sh
 
-# triple monitor screen script (WORK)
-exec_always --no-startip-id /home/ax/.screenlayout/tripleMonitor.sh
-
 # kill focused window
 bindsym $mod+q                  kill
 
@@ -127,6 +124,9 @@ bindsym $mod+l                  exec --no-startup-id i3lock-fancy
 
 # start google chrome
 bindsym $mod+g 			exec google-chrome-stable --remote-debugging-port=9222
+
+# start rambox
+bindsym $mod+r			exec rambox &
 
 # show ranger
 bindsym $mod+Shift+e            exec export EDITOR='nvim' && gnome-terminal -e ranger
@@ -189,3 +189,7 @@ focus_follows_mouse no
 
 # add rule to create floating windows
 for_window [title="AX_FLOATING"] floating enable
+
+#config triple monitor
+bindsym $mod+m  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
+
