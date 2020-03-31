@@ -32,3 +32,5 @@ export PATH="$HOME/data/programs/:$PATH"
 export PATH=/opt/gcc-arm-none-eabi-6-2017-q2-update/bin:$PATH
 export PATH=/home/ax/Projects/basteln/Tools/autotest:$PATH
 export PATH=/home/ax/Programs/gcc-arm-none-eabi-6-2017-q2-update:$PATH
+export PATH=/opt/cisco/anyconnect/bin:$PATH
+
