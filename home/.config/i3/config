@@ -187,6 +187,9 @@ exec_always --no-startup-id "sleep 1; setxkbmap -option 'grp:ctrl_alt_toggle'"
 # mouse follow disabled
 focus_follows_mouse no
 
+# add rule to create floating windows
+for_window [title="AX_FLOATING"] floating enable
+
 #config triple monitor
 bindsym $mod+m  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
 

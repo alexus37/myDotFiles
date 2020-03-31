@@ -52,6 +52,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 export PATH=/home/ax/Projects/basteln/Tools/autotest:$PATH
+export PATH=/opt/cisco/anyconnect/bin:$PATH
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
+
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
