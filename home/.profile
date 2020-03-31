@@ -21,10 +21,22 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# set PATH for cuda 10.1 installation
+if [ -d "/usr/local/cuda-10.1/bin/" ]; then
+    export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+
+if [ -d "~/data/programs/NVIDIA-OptiX-SDK-6.5.0-linux64 " ]; then
+    export PATH=/home/ax/data/programs/NVIDIA-OptiX-SDK-6.5.0-linux64${PATH:+:${PATH}}
+fi
+
 
 export EDITOR=/usr/bin/vim
 export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"

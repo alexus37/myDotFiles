@@ -2,6 +2,10 @@ command=~/.scripts/statusbar/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
+[gpu]
+interval=1
+label=GPU-MEM
+
 [monitors]
 #label=🖥️
 interval=once

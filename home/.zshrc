@@ -51,8 +51,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=/usr/local/cuda-10.1/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.1/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 export PATH=/home/ax/Projects/basteln/Tools/autotest:$PATH
 export PATH=/opt/cisco/anyconnect/bin:$PATH
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
@@ -62,3 +60,4 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
 
 [[ ! -f $HOME/miniconda3/bin/activate.sh ]] || source $HOME/miniconda3/bin/activate.sh
 [[ ! -f $HOME/Programs/mitsuba/setpath.sh ]] || source $HOME/Programs/mitsuba/setpath.sh
+export PYTHONPATH="${PYTHONPATH}:$HOME/data/programs/mitsuba2/build/dist/python"
