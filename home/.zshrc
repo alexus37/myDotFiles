@@ -16,6 +16,7 @@ setopt extendedhistory
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias torrent='aria2c'
 
 if [ -f ~/.ssh/agent.env ] ; then
     . ~/.ssh/agent.env > /dev/null
@@ -61,3 +62,6 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
 [[ ! -f $HOME/miniconda3/bin/activate.sh ]] || source $HOME/miniconda3/bin/activate.sh
 [[ ! -f $HOME/Programs/mitsuba/setpath.sh ]] || source $HOME/Programs/mitsuba/setpath.sh
 export PYTHONPATH="${PYTHONPATH}:$HOME/data/programs/mitsuba2/build/dist/python"
+export CC=gcc
+export CXX=g++
+export HOST='localhost'

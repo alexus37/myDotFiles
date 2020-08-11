@@ -2,17 +2,25 @@ command=~/.scripts/statusbar/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
+[crypto]
+interval=60
+instance=XBTEUR
+
+[crypto]
+interval=60
+instance=NANOEUR
+
+[crypto]
+interval=60
+instance=ETHEUR
+
 [gpu]
 interval=1
-label=GPU-MEM
+label=G-MEM
 
 [monitors]
 #label=🖥️
 interval=once
-#SHOW_ON_OFF=1
-#SHOW_NAMES=1
-#SHOW_PRIMARY=1
-#SHOW_MODE=1
 
 [pingtime]
 interval=10
@@ -38,9 +46,6 @@ min_width=⣾⣄ 100.00%
 interval=once
 signal=1
 
-# TODO: make this work
-[internet]
-interval=10
 
 [lang]
 label=🚩

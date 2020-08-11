@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# coding=utf-8
+
+import json
+import requests
+import os
+import sys
+
+precisions = {
+    'XBTEUR': 1,
+    'NANOEUR': 3,
+    'ETHEUR': 1
+}
+
+API_URL = 'https://api.kraken.com/0/public/Ticker?pair=' # CoinMarketCap API
+pair = os.environ.get('BLOCK_INSTANCE', 'XBTEUR')
+r = requests.get(f'{API_URL}{pair}')
+data = json.loads(r.text)
+pair_name = list(data['result'].keys())[0]
+if len(data['error']) != 0:
+    print('Err')
+else:
+    price = float(data['result'][pair_name]['c'][0])
+    precision = precisions[pair]
+    print(('{} {:.' + str(precision) + 'f}').format(pair, price)) # Short Text
