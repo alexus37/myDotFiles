@@ -16,8 +16,9 @@ setopt extendedhistory
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias torrent='aria2c'
+alias torrent='aria2c --seed-ratio=0.1 --max-upload-limit=1K --seed-time=0'
 alias openpdf='xdg-open'
+alias resolve='/opt/resolve/bin/resolve'
 
 if [ -f ~/.ssh/agent.env ] ; then
     . ~/.ssh/agent.env > /dev/null
@@ -66,3 +67,7 @@ export PYTHONPATH="${PYTHONPATH}:$HOME/data/programs/mitsuba2/build/dist/python"
 export CC=gcc
 export CXX=g++
 export HOST='localhost'
+
+cd /opt/hfs18.0.566
+source houdini_setup -q
+cd - > /dev/null
