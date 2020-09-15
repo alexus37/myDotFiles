@@ -193,3 +193,4 @@ for_window [title="AX_FLOATING"] floating enable
 #config triple monitor
 bindsym $mod+m  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
 
+bindsym $mod+k exec /home/ax/.screenlayout/rerun_tripleScreen.sh
