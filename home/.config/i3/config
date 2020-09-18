@@ -1,5 +1,4 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $term --no-startup-id $TERM
 set $file ranger
 set $mod Mod4
@@ -108,10 +107,7 @@ exec_always alttab -d 1
 exec_always --no-startup-id clipd
 
 # add ssh key
-exec_always --no-startup-id /home/ax/.scripts/tools/gnome-keyring.sh
-
-# dual screen script
-exec_always --no-startup-id /home/ax/.screenlayout/doubleMonitor.sh
+exec_always --no-startup-id ~/.scripts/tools/gnome-keyring.sh
 
 # kill focused window
 bindsym $mod+q                  kill
@@ -191,6 +187,6 @@ focus_follows_mouse no
 for_window [title="AX_FLOATING"] floating enable
 
 #config triple monitor
-bindsym $mod+m  exec --no-startup-id /home/ax/.screenlayout/tripleMonitor.sh
+bindsym $mod+m  exec --no-startup-id ~/.screenlayout/tripleMonitor.sh
 
-bindsym $mod+k exec /home/ax/.screenlayout/rerun_tripleScreen.sh
+bindsym $mod+k exec ~/.screenlayout/rerun_tripleScreen.sh

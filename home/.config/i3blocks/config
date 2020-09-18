@@ -19,7 +19,6 @@ interval=1
 label=G-MEM
 
 [monitors]
-#label=🖥️
 interval=once
 
 [pingtime]

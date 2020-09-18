@@ -173,7 +173,6 @@ else
     ssh-add
 fi
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -192,3 +191,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# required because 
+export SHELL=/usr/bin/zsh
+exec /usr/bin/zsh --login
