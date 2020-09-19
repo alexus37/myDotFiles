@@ -147,7 +147,7 @@ bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 # bindsym XF86AudioRaiseVolume 	exec --no-startup-id pulsemixer --change-volume +5 #increase sound volume
 # bindsym XF86AudioLowerVolume 	exec --no-startup-id pulsemixer --change-volume -5 #decrease sound volume
 # bindsym XF86AudioMute 		exec --no-startup-id pulsemixer --toggle-mute # mute sound
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
@@ -187,6 +187,6 @@ focus_follows_mouse no
 for_window [title="AX_FLOATING"] floating enable
 
 #config triple monitor
-bindsym $mod+m  exec --no-startup-id ~/.screenlayout/tripleMonitor.sh
+exec_always --no-startup-id ~/.screenlayout/tripleMonitor.sh &> /tmp/tripleMonitor
 
 bindsym $mod+k exec ~/.screenlayout/rerun_tripleScreen.sh
