@@ -190,3 +190,6 @@ for_window [title="AX_FLOATING"] floating enable
 exec_always --no-startup-id ~/.screenlayout/tripleMonitor.sh &> /tmp/tripleMonitor
 
 bindsym $mod+k exec ~/.screenlayout/rerun_tripleScreen.sh
+
+# clip history
+bindsym $mod+t exec --no-startup-id ~/.scripts/i3cmds/newworkspace
