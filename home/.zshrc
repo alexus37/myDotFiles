@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 export FZF_BASE=$HOME/.fzf
-plugins=(git colorize npm pip python debian zsh-z  zsh-syntax-highlighting zsh-autosuggestions fzf)
+plugins=(git colorize npm pip python debian zsh-z zsh-syntax-highlighting zsh-autosuggestions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,6 +19,7 @@ alias l='ls -CF'
 alias torrent='aria2c --seed-ratio=0.1 --max-upload-limit=1K --seed-time=0'
 alias openpdf='xdg-open'
 alias manta="$HOME/Programs/manta/build/manta"
+alias cat="batcat"
 
 if [ -f ~/.ssh/agent.env ] ; then
     . ~/.ssh/agent.env > /dev/null
@@ -85,3 +86,9 @@ then
 
 	export PATH="$HOME/Programs/imagemagick/bin:$PATH"
 fi
+
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
