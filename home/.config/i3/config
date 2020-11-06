@@ -193,3 +193,4 @@ bindsym $mod+k exec ~/.screenlayout/rerun_tripleScreen.sh
 
 # clip history
 bindsym $mod+t exec --no-startup-id ~/.scripts/i3cmds/newworkspace
+bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/i3cmds/movetonewworkspace

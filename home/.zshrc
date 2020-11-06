@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -67,6 +74,7 @@ export PATH=/opt/cisco/anyconnect/bin:$PATH
 
 [[ ! -f $HOME/miniconda3/bin/activate.sh ]] || source $HOME/miniconda3/bin/activate.sh
 [[ ! -f $HOME/Programs/mitsuba/setpath.sh ]] || source $HOME/Programs/mitsuba/setpath.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PYTHONPATH="${PYTHONPATH}:$HOME/data/programs/mitsuba2/build/dist/python"
 export CC=gcc
 export CXX=g++
@@ -85,6 +93,13 @@ if [ -d ~/Programs/imagemagick/bin ]
 then
 
 	export PATH="$HOME/Programs/imagemagick/bin:$PATH"
+fi
+
+if [ -d $HOME/Programs/partio/build/bin ] 
+then
+
+	export PATH="$HOME/Programs/partio/build/bin:$PATH"
+	export LD_LIBRARY_PATH="$HOME/Programs/partio/build/lib:$LD_LIBRARY_PATH"
 fi
 
 mkcdir ()
