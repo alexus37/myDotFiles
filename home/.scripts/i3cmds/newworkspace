@@ -3,5 +3,17 @@
 # Gives a dmenu prompt labeled with $1 to perform command $2.
 # For example:
 # `./prompt "Do you want to shutdown?" "shutdown -h now"`
+# try to find a gap
 
-i3-msg workspace $(($(i3-msg -t get_workspaces | tr , '\n' | grep '"num":' | cut -d : -f 2 | sort -rn | head -1) + 1))
+workspaceIndex=$(i3-msg -t get_workspaces | tr , '\n' | grep '"num":' | cut -d : -f 2 | sort  | awk '$1!=NR{print NR;exit}')
+
+
+# otherwise create new
+if ! [ "$workspaceIndex" -ge 0 ] ;
+then
+	echo "No gap found"
+	workspaceIndex=$(($(i3-msg -t get_workspaces | tr , '\n' | grep '"num":' | cut -d : -f 2 | sort -rn | head -1) + 1))
+fi
+
+
+i3-msg workspace $workspaceIndex

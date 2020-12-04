@@ -79,7 +79,18 @@ export PATH=/opt/cisco/anyconnect/bin:$PATH
 export PYTHONPATH="${PYTHONPATH}:$HOME/data/programs/mitsuba2/build/dist/python"
 export CC=gcc
 export CXX=g++
-export HOST='localhost'
+# export HOST='localhost'
+
+HOSTNAME="$(hostname)"  # Conda clobbers HOST, so we save the real hostname into another variable.
+
+precmd() {
+    OLDHOST="${HOST}"
+    HOST="${HOSTNAME}"
+}
+
+preexec() {
+    HOST="${OLDHOST}"
+}
 
 if [ -d /opt/hfs18.0.566 ]
 then

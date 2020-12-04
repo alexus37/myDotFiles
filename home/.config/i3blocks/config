@@ -4,6 +4,10 @@ markup=pango
 
 [crypto]
 interval=60
+instance=MLNEUR
+
+[crypto]
+interval=60
 instance=XMREUR
 
 
