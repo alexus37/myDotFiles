@@ -48,7 +48,6 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
-# bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -195,3 +194,7 @@ bindsym $mod+j exec ~/.screenlayout/singleScreen.sh
 # clip history
 bindsym $mod+t exec --no-startup-id ~/.scripts/i3cmds/newworkspace
 bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/i3cmds/movetonewworkspace
+
+# help
+bindsym $mod+Shift+h exec "cat /home/ax/.config/i3/config | grep 'bindsym .mod' | zenity --height 1000 --width 800 --list --column 'command'  &> /tmp/help_ax"
+

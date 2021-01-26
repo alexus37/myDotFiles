@@ -119,3 +119,8 @@ mkcdir ()
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
+
+# vlc player font to small otherwise
+#
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_SCALE_FACTOR=2
