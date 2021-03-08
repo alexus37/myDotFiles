@@ -4,7 +4,7 @@ markup=pango
 
 [crypto]
 interval=60
-instance=XMREUR
+instance=UNIEUR
 
 
 [crypto]

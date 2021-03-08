@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 export FZF_BASE=$HOME/.fzf
-plugins=(git colorize npm pip python debian zsh-z zsh-syntax-highlighting zsh-autosuggestions fzf)
+plugins=(git colorize npm pip python debian zsh-z zsh-syntax-highlighting zsh-autosuggestions fzf k)
 
 source $ZSH/oh-my-zsh.sh
 
