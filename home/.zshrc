@@ -19,13 +19,14 @@ HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=10000
 setopt sharehistory
 setopt extendedhistory
-
+alias x='exit'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias torrent='aria2c --seed-ratio=0.1 --max-upload-limit=1K --seed-time=0'
 alias openpdf='xdg-open'
 alias manta="$HOME/Programs/manta/build/manta"
+alias render="$HOME/scripts/render.py"
 alias cat="batcat"
 alias openimg="eog"
 

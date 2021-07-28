@@ -167,6 +167,9 @@ new_window pixel 3
 # disable screen save
 exec_always --no-startup-id xset s off
 
+# tablet pen
+exec --no-startup-id xbindkeys
+
 
 # language switcher
 exec_always --no-startup-id "sleep 1; setxkbmap -layout us,de"
@@ -191,4 +194,6 @@ bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/i3cmds/movetonewworkspace
 
 # help
 bindsym $mod+Shift+h exec "cat /home/ax/.config/i3/config | grep 'bindsym .mod' | zenity --height 1000 --width 800 --list --column 'command'  &> /tmp/help_ax"
+
+
 
