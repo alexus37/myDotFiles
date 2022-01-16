@@ -5,6 +5,19 @@ set $mod Mod4
 set $shutdown shutdown -h now
 set $reboot sudo -A reboot
 
+set $bg-color 	         #00ff03
+set $border-color        #00ff03
+set $indicator-color 	 #62F4CA
+set $inactive-bg-color   #ffffff00
+set $text-color          #ffffff
+
+# style
+client.focused          $border-color       $bg-color          $text-color          $indicator-color
+
+# gaps
+gaps inner 4
+gaps outer 2
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 14
@@ -29,6 +42,9 @@ bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
+
+bindsym $mod+Mod1+Left workspace prev
+bindsym $mod+Mod1+Right workspace next
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -157,6 +173,9 @@ bindsym XF86AudioPrev 		exec playerctl previous
 # run wifi on startup
 exec --no-startup-id nm-applet
 
+# run bluthooth on startup 
+exec --no-startup-id blueman-applet
+
 # set up compose key
 exec_always --no-startup-id setxkbmap -option compose:caps
 
@@ -178,6 +197,7 @@ exec_always --no-startup-id "sleep 1; setxkbmap -option 'grp:ctrl_alt_toggle'"
 
 # mouse follow disabled
 focus_follows_mouse no
+# exec_always --no-startup-id  imwheel  # mouse scroll wheel spee
 
 # add rule to create floating windows
 for_window [title="AX_FLOATING"] floating enable
@@ -194,6 +214,5 @@ bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/i3cmds/movetonewworkspace
 
 # help
 bindsym $mod+Shift+h exec "cat /home/ax/.config/i3/config | grep 'bindsym .mod' | zenity --height 1000 --width 800 --list --column 'command'  &> /tmp/help_ax"
-
 
 

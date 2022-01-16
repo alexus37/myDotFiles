@@ -9,7 +9,9 @@ import sys
 precisions = {
     'XBTEUR': 1,
     'NANOEUR': 3,
-    'ETHEUR': 1
+    'ETHEUR': 1,
+    'ADAEUR': 2,
+    'UNIEUR': 1
 }
 
 API_URL = 'https://api.kraken.com/0/public/Ticker?pair=' # CoinMarketCap API
